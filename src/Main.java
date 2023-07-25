@@ -47,6 +47,6 @@ public class Main {
         System.out.println(isPerfectNumber(28));
         System.out.println(isPerfectNumber(5));
         System.out.println(isPerfectNumber(-1));
-        System.out.println(numberToWords(-12));
+
     }
 }
