@@ -32,11 +32,49 @@ public class Main {
 
     }
 
-    public static void numberToWords(int number) {
-        if(number<=0){
-            System.out.println("Invalid Value");
+    public static String numberToWords(int number) {
+        if(number<0){
+            return "Invalid Value";
         }
+        String text="";
+        char[] numberArray = String.valueOf(number).toCharArray();
+        for (char digit : numberArray){
+            switch (digit){
+                case '0':
+                    text +="Zero";
+                    break;
+                case '1':
+                    text +="One";
+                    break;
+                case '2':
+                    text +="Two";
+                    break;
+                case '3':
+                    text +="Three";
+                    break;
+                case '4':
+                    text +="Four";
+                    break;
+                case '5':
+                    text +="Five";
+                    break;
+                case '6':
+                    text +="Six";
+                    break;
+                case '7':
+                    text +="Seven";
+                    break;
+                case '8':
+                    text +="Eight";
+                    break;
+                case '9':
+                    text +="Nine";
+                    break;
 
+
+            }
+        }
+        return text.trim();
 
     }
     public static void main(String[] args) {
@@ -47,6 +85,9 @@ public class Main {
         System.out.println(isPerfectNumber(28));
         System.out.println(isPerfectNumber(5));
         System.out.println(isPerfectNumber(-1));
+        System.out.println(numberToWords(123));
+        System.out.println(numberToWords(1010));
+        System.out.println(numberToWords(-12));
 
     }
 }
